@@ -211,3 +211,72 @@ categories.forEach(category => {
     document.getElementById('sections-container').appendChild(section);
     fetchProducts(category.slug, category.slug); // Fetch products for each category
 });
+
+// Last Banner Slider
+document.addEventListener('DOMContentLoaded', function() {
+    const images = [
+        'assets/imgs/banners/banner-one-1.png',
+        'assets/imgs/banners/banner-one-2.png',
+        'assets/imgs/banners/banner-one-3.png',
+        'assets/imgs/banners/banner-one-4.png'
+    ];
+
+    const slidesContainer = document.querySelector('#dynamicBanner .slides');
+    const ellipsesContainer = document.querySelector('#dynamicBanner .ellipses');
+    let currentIndex = 0;
+
+    images.forEach((image, index) => {
+        const slide = document.createElement('div');
+        slide.classList.add('slide');
+        slide.innerHTML = `<img src="${image}" alt="banner-${index + 1}">`;
+        slidesContainer.appendChild(slide);
+
+        const dot = document.createElement('span');
+        dot.addEventListener('click', () => goToSlide(index));
+        ellipsesContainer.appendChild(dot);
+    });
+
+    function goToSlide(index) {
+        currentIndex = index;
+        updateSlider();
+    }
+
+    function updateSlider() {
+        const offset = -currentIndex * 100;
+        slidesContainer.style.transform = `translateX(${offset}%)`;
+        updateDots();
+    }
+
+    function updateDots() {
+        const dots = ellipsesContainer.querySelectorAll('span');
+        dots.forEach((dot, index) => {
+            dot.style.backgroundColor = index === currentIndex ? 'black' : 'white';
+        });
+    }
+
+    document.querySelector('#dynamicBanner .prev').addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+        updateSlider();
+    });
+
+    document.querySelector('#dynamicBanner .next').addEventListener('click', () => {
+        currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+        updateSlider();
+    });
+
+    updateSlider();
+
+    // Add CSS transition property to the slidesContainer to enable smooth transitions
+    slidesContainer.style.transition = 'transform 0.5s ease';
+
+    // Function to automatically change slides every 3 seconds
+    function startSliderAutoPlay() {
+        setInterval(() => {
+            currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+            updateSlider();
+        }, 3000); // Change slide every 3 seconds
+    }
+
+    // Call the function to start auto-playing the slider
+    startSliderAutoPlay();
+});

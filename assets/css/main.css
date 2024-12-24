@@ -1248,6 +1248,13 @@ a {
     letter-spacing: 0px;
 }
 
+.login-main-content .login-card .form .field .error-message {
+    display: none;
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
 .login-main-content .login-card .form .field .input-group .input-group-text {
     background: transparent;
     border: none;
@@ -1774,5 +1781,396 @@ a {
     }
 }
 
+.last-banners {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 80px 112px;
+}
+
+.last-banners .banner-one,
+.last-banners .frame-81 {
+    width: 50%;
+}
+
+.last-banners .banner-one {
+    height: 672px;
+    background-color: #F1F1F1;
+    border-radius: 8px;
+    position: relative;
+}
+
+.last-banners .banner-one .images {
+    overflow: hidden;
+    height: 672px;
+}
+
+.last-banners .banner-one .images .slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.last-banners .banner-one .images .slides .slide {
+    min-width: 100%;
+    height: 672px;
+}
+
+.last-banners .banner-one .images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.last-banners .banner-one .text-block {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: rgb(51 51 51 / 25%);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.last-banners .banner-one .text-block h6,
+.last-banners .banner-one .text-block p {
+    margin: 0;
+    color: var(--base-02);
+}
+
+.last-banners .banner-one .text-block button,
+.last-banners .frame-81 .banner-two .text-block button {
+    width: 103px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1px solid var(--base-01);
+    color: var(--base-02);
+    background-color: var(--base-01);
+    transition: var(--main-transition);
+}
+
+.last-banners .banner-one .text-block button:hover,
+.last-banners .frame-81 .banner-two .text-block button:hover {
+    background-color: var(--base-04);
+    border-color: var(--grey-06);
+}
+
+.last-banners .banner-one .horizontal-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 47px;
+    padding: 0 40px;
+    width: 100%;
+}
+
+.last-banners .banner-one .horizontal-content .ellipses {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.last-banners .banner-one .horizontal-content .ellipses span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--grey-02);
+    border: 1px solid var(--grey-06);
+    cursor: pointer;
+}
+
+.last-banners .banner-one .horizontal-content .ellipses span:first-child {
+    background-color: var(--base-01);
+}
+
+.last-banners .banner-one .horizontal-content .control {
+    width: 80px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.last-banners .banner-one .horizontal-content .control button {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    gap: 10px;
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid var(--grey-02);
+    background-color: var(--base-02);
+    color: var(--base-01);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--main-transition);
+}
+
+.last-banners .banner-one .horizontal-content .control button i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    font-size: 9px;
+    transition: var(--main-transition);
+}
+
+.last-banners .banner-one .horizontal-content .control button:hover {
+    background-color: var(--base-04);
+    color: var(--base-02);
+    border-color: var(--grey-06);
+}
+
+.last-banners .banner-one .horizontal-content .control button:hover i {
+    color: var(--base-02);
+}
+
+.last-banners .frame-81 {
+    height: 672px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.last-banners .frame-81 .banner-two {
+    height: 320px;
+    width: 100%;
+    border-radius: 8px;
+    position: relative;
+}
+
+.last-banners .frame-81 .banner-two:first-child {
+    background-image: url(../imgs/banners/banner-one-5.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.last-banners .frame-81 .banner-two:nth-child(2) {
+    background-image: url(../imgs/banners/banner-one-6.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.last-banners .frame-81 .banner-two .text-block {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(51 51 51 / 25%);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.last-banners .frame-81 .banner-two .text-block h6,
+.last-banners .frame-81 .banner-two .text-block p {
+    margin: 0;
+    color: var(--base-02);
+}
+
+@media (max-width: 1440px) {
+    .last-banners {
+        flex-direction: column;
+    }
+
+    .last-banners .banner-one,
+    .last-banners .frame-81 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .last-banners {
+        padding: 32px 20px;
+    }
+}
+
 /* End Home Page */
+
+/* Start Seller Page */
+
+.seller-page-main-content .page-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.seller-page-main-content .page-header .page-header-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 0 112px;
+    margin-top: -40px;
+}
+
+.seller-page-main-content .page-header .page-header-container .avatar-and-content {
+    display: flex;
+    gap: 24px;
+}
+
+.seller-page-main-content .page-header .page-header-container .avatar-and-content .avatar {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    outline: 8px solid #FFFFFF;
+    margin-bottom: 32px;
+}
+
+.seller-page-main-content .page-header .page-header-container .avatar-and-content .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 64px;
+}
+
+.seller-page-main-content .page-header .page-header-container .avatar-and-content .content .text {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.seller-page-main-content .page-header .page-header-container .avatar-and-content .content .text span:nth-child(1) {
+    color: var(--grey-06);
+}
+
+.seller-page-main-content .page-header .page-header-container .avatar-and-content .content .text a {
+    color: var(--base-01);
+    transition: var(--main-transition);
+}
+
+.seller-page-main-content .page-header .page-header-container .avatar-and-content .content .text a:hover {
+    color: var(--base-04);
+}
+
+.seller-page-main-content .page-header .page-header-container .avatar-and-content .content .text span {
+    color: var(--grey-02);
+}
+
+.seller-page-main-content .page-header .page-header-container .avatar-and-content .content .text-and-supporting-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.seller-page-main-content .page-header .page-header-container .avatar-and-content .content .text-and-supporting-text h6 {
+    color: #101828;
+    margin: 0;
+}
+
+.seller-page-main-content .page-header .page-header-container .avatar-and-content .content .text-and-supporting-text .details {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.seller-page-main-content .page-header .page-header-container .avatar-and-content .content .text-and-supporting-text .details .rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.seller-page-main-content .page-header .page-header-container .avatar-and-content .content .text-and-supporting-text .details .rating .value {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.seller-page-main-content .page-header .page-header-container .avatar-and-content .content .text-and-supporting-text .details .rating .value .star {
+    width: 16px;
+    height: 16px;
+    background-color: var(--grey-03);
+    clip-path: polygon(
+        50% 0%,
+        61% 35%,
+        98% 35%,
+        68% 57%,
+        79% 91%,
+        50% 70%,
+        21% 91%,
+        32% 57%,
+        2% 35%,
+        39% 35%
+    );
+    cursor: pointer;
+    transition: background-color var(--main-transition);
+}
+
+.seller-page-main-content .page-header .page-header-container .avatar-and-content .content .text-and-supporting-text .details .rating .value .star.active,
+.seller-page-main-content .page-header .page-header-container .avatar-and-content .content .text-and-supporting-text .details .rating .value .star.hover {
+    background-color: var(--base-05);
+}
+
+.seller-page-main-content .page-header .page-header-container .avatar-and-content .content .text-and-supporting-text .details .rating .rate-value {
+    color: var(--grey-05);
+}
+
+.seller-page-main-content .page-header .page-header-container .avatar-and-content .content .text-and-supporting-text .details .link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.seller-page-main-content .page-header .page-header-container .avatar-and-content .content .text-and-supporting-text .details .link input {
+    margin: 0;
+    border-radius: 50%;
+}
+
+.seller-page-main-content .page-header .page-header-container .avatar-and-content .content .text-and-supporting-text .details .link input:checked {
+    background-color: var(--grey-04);
+    border-color: var(--grey-04);
+}
+
+.seller-page-main-content .page-header .page-header-container .avatar-and-content .content .text-and-supporting-text .details .link span {
+    color: var(--grey-05);
+}
+
+@media (max-width: 920px) {
+    .seller-page-main-content .page-header .page-header-container {
+        padding: 0 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .seller-page-main-content .page-header .page-header-container .avatar-and-content {
+        flex-direction: column;
+    }
+
+    .seller-page-main-content .page-header .page-header-container .avatar-and-content .avatar {
+        width: 100px;
+        height: 100px;
+        margin: 0;
+    }
+
+    .seller-page-main-content .page-header .page-header-container .avatar-and-content .content {
+        padding: 0;
+    }
+}
+
+@media (max-width: 575px) {
+    .seller-page-main-content .page-header .page-header-container .avatar-and-content .content .text {
+        display: none;
+    }
+
+    .seller-page-main-content .page-header .page-header-container .avatar-and-content .content .text-and-supporting-text .details {
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+/* End Seller Page */
 

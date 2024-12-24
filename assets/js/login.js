@@ -2,6 +2,12 @@ document.getElementById('loginButton').addEventListener('click', function() {
     const email = document.getElementById('loginEmail').value;
     const password = document.getElementById('loginPassword').value;
 
+    // Basic validation
+    if (!email || !password) {
+        document.getElementById('emailError').style.display = 'block';
+        return;
+    }
+
     fetch('https://675864a560576a194d10537e.mockapi.io/users?email=' + email + '&password=' + password)
     .then(response => response.json())
     .then(data => {
